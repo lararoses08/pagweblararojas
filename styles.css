@@ -1,0 +1,750 @@
+/* Fuentes modernas */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/* Configuración global */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #121212, #1C1C1C);
+    color: white;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.3s ease-in-out; /* Animación suave para el margen */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 9%;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-icon:hover {
+    color: #ffcc00;
+}
+
+/* Barra superior */
+.top-bar {
+    background: linear-gradient(90deg, #ffcc00, #ff6600);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Botón destacado */
+.explore-btn {
+    background: linear-gradient(90deg, #ff6600, #ffcc00);
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: #ffcc00;
+}
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Estilos para la página de inicio de sesión */
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card {
+    background: #1C1C1C;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2C2C2C;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.form-group input:focus {
+    background: #3C3C3C;
+    outline: none;
+}
+
+.login-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #ffcc00;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+    color: #ff6600;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+    }
+    .trending, .offers, .energia {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Menú lateral moderno */
+.sidebar {
+    width: 200px; /* Reducido de 250px a 200px */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px; /* Reducido de 20px a 15px */
+    position: fixed;
+    height: 100%;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    left: -200px; /* Oculto por defecto */
+    transition: left 0.3s ease-in-out; /* Animación suave */
+    z-index: 1000; /* Asegura que el menú esté encima del contenido */
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #ffcc00;
+    font-size: 1.2em; /* Ajustado para que se vea bien en el nuevo tamaño */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px; /* Reducido de 10px a 8px */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em; /* Ajustado para que se vea bien en el nuevo tamaño */
+}
+
+/* Mostrar el menú cuando el mouse pasa sobre el área */
+.sidebar:hover {
+    left: 0;
+}
+
+/* Contenido principal */
+main {
+    margin-left: 20px; /* Ajusta el margen para que se vea bien con el nuevo tamaño */
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out; /* Animación suave para el margen */
+}
+
+.sidebar:hover ~ main {
+    margin-left: 220px; /* Ajusta el contenido cuando el menú está visible */
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #ffcc00;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Mostrar el menú cuando el mouse pasa sobre el área */
+.sidebar:hover {
+    left: 0;
+}
+
+/* Contenido principal */
+main {
+    margin-left: 20px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out; /* Animación suave para el margen */
+}
+
+.sidebar:hover ~ main {
+    margin-left: 270px; /* Ajusta el contenido cuando el menú está visible */
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 10px;
+}
+
+/* Sección deslizable */
+.trending, .offers, .energia {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    white-space: nowrap; /* Evita que los elementos se acomoden en varias líneas */
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory; /* Suaviza el desplazamiento */
+    flex-wrap: nowrap; /* Permite que se ajusten si el espacio es reducido */
+    justify-content: flex-start; /* Alinea las tarjetas al inicio */
+}
+
+/* Ajuste de las tarjetas */
+.card {
+    flex: 0 0 auto; /* Mantiene el tamaño original */
+    width: 350px; /* Fija el tamaño de las tarjetas */
+    background: #1C1C1C;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    scroll-snap-align: center; /* Centra los elementos al deslizar */
+    text-align: center;
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Barra de desplazamiento personalizada */
+.trending::-webkit-scrollbar, .offers::-webkit-scrollbar, .energia::-webkit-scrollbar {
+    height: 8px;
+}
+
+.trending::-webkit-scrollbar-thumb, .offers::-webkit-scrollbar-thumb, .energia::-webkit-scrollbar-thumb {
+    background: #ff6600;
+    border-radius: 10px;
+}
+
+/* Ajuste de imágenes dentro de las tarjetas */
+.card img {
+    width: 100%;
+    max-width: 350px; /* Máximo tamaño */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Ajuste de botones */
+button {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffcc00;
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Estilos para la página de información */
+.info-main {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.video-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+#video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(50%);
+}
+
+/* Estilos para la página de tendencias */
+.trending, .offers, .energia, .testimonials, .news {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+
+.info-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+.testimonial-card, .news-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.info {
+    display: none;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.info-btn, .price-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.info-btn:hover, .price-btn:hover {
+    background: #ffcc00;
+}
+
+.availability {
+    display: block;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+.news-card h3 {
+    margin-top: 0;
+}
+
+.news-card p {
+    margin: 10px 0;
+}
+
+.news-card a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-card a:hover {
+    color: #ff6600;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+    }
+    .trending, .offers, .energia, .testimonials, .news {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.info-btn, .price-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.info-btn:hover, .price-btn:hover {
+    background: #ffcc00;
+}
+
+.availability {
+    display: block;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+.news-card h3 {
+    margin-top: 0;
+}
+
+.news-card p {
+    margin: 10px 0;
+}
+
+.news-card a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-card a:hover {
+    color: #ff6600;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+    }
+    .trending, .offers, .energia, .testimonials, .news {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.contact-section .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-section .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2C2C2C;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
+    background: #3C3C3C;
+    outline: none;
+}
+
+.contact-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #ffcc00;
+}

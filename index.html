@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla - Futuro Eléctrico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <span>🚀 Descubre la nueva generación de Tesla</span>
+            <button class="explore-btn">Explora aquí</button>
+        </div>
+        
+        <nav>
+            <img src="descarga.png" alt="Tesla Logo" class="logo">
+            <div class="nav-icons">
+                <a href="explore.html" class="nav-icon" aria-label="Explorar"><i class="fas fa-question-circle"></i></a>
+                <a href="login.html" class="nav-icon" aria-label="Iniciar sesión"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </nav>
+    </header>
+
+
+    <aside class="sidebar">
+        <h3>⚡ Accesorios</h3>
+        <ul>
+            <li><a href="Energia.html">🔋 Energía</a></li>
+            <li><a href="Techo Solar.html">🌞 Techo Solar</a></li>
+            <li><a href="Techo Solar.html">🔆 Panel Solar</a></li>
+            <li><a href="Comercio.html">⚡ Comercio</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Modelos en tendencia</h2>
+        <section class="trending">
+            <div class="card" id="cybertruck">
+                <div class="carousel" id="carousel-cybertruck">
+                    <div class="carousel-images">
+                        <img src="Cybertruck" alt="Cybertruck">
+                        <img src="Cybertruck2" alt="Cybertruck2">
+                        <img src="Cybertruck3" alt="Cybertruck3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-cybertruck')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-cybertruck')">&#10095;</button>
+                </div>
+                <p>Cybertruck</p>
+                <button class="info-btn" onclick="toggleInfo('info-cybertruck')">Ver más</button>
+                <div class="info" id="info-cybertruck" style="display: none;">
+                    <p>El Cybertruck es un vehículo eléctrico de alta resistencia diseñado para ser funcional y versátil. 
+                        Con un diseño futurista y capacidades impresionantes, es ideal para cualquier aventura.</p>
+                </div>
+            </div>
+            <div class="card" id="model-y">
+                <div class="carousel" id="carousel-model-y">
+                    <div class="carousel-images">
+                        <img src="Modelo y" alt="Modelo y">
+                        <img src="Modelo y2" alt="Modelo y2">
+                        <img src="Modelo y3" alt="Modelo y3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-model-y')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-model-y')">&#10095;</button>
+                </div>
+                <p>Modelo Y</p>
+                <span class="availability">🛠 Disponible en marzo</span>
+            </div>
+            <div class="card" id="model-3">
+                <div class="carousel" id="carousel-model-3">
+                    <div class="carousel-images">
+                        <img src="Modelo 3" alt="Modelo 3">
+                        <img src="Modelo 32" alt="Modelo 32">
+                        <img src="Modelo 33" alt="Modelo 33">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-model-3')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-model-3')">&#10095;</button>
+                </div>
+                <p>Modelo 3</p>
+                <button class="info-btn">Ver más</button>
+            </div>
+        </section>
+
+        <h2>Ofertas exclusivas</h2>
+        <section class="offers">
+            <div class="card" id="model-x">
+                <div class="carousel" id="carousel-model-x">
+                    <div class="carousel-images">
+                        <img src="Modelo x" alt="Model X 1">
+                        <img src="Modelo x2" alt="Model X 2">
+                        <img src="Modelo x3" alt="Model X 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-model-x')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-model-x')">&#10095;</button>
+                </div>
+                <p>Modelo X</p>
+                <button class="price-btn">Ver precios</button>
+            </div>
+            <div class="card" id="model-s">
+                <div class="carousel" id="carousel-model-s">
+                    <div class="carousel-images">
+                        <img src="Modelo s" alt="Model S 1">
+                        <img src="Modelo s2" alt="Model S 2">
+                        <img src="Modelo s3" alt="Model S 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-model-s')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-model-s')">&#10095;</button>
+                </div>
+                <p>Modelo S</p>
+                <button class="price-btn">Ver precios</button>
+            </div>
+            
+            <div class="card" id="panel-solar">
+                <div class="carousel" id="carousel-panel-solar">
+                    <div class="carousel-images">
+                        <img src="Camiones 2" alt="Panel Solar 2">
+                        <img src="Camiones 3" alt="Panel Solar 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-panel-solar')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-panel-solar')">&#10095;</button>
+                </div>
+                <p>Camiones</p>
+                <span class="availability">🛠 Disponible en 2026</span>
+            </div>
+        </section>
+
+        <h2>Soluciones de energía</h2>
+        <section class="energia">
+            <div class="card" id="panel-solar">
+                <div class="carousel" id="carousel-panel-solar-energy">
+                    <div class="carousel-images">
+                        <img src="Panel solar" alt="Panel Solar 1">
+                        <img src="images/panel-solar-energy-2.jpg" alt="Panel Solar 2">
+                        <img src="images/panel-solar-energy-3.jpg" alt="Panel Solar 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-panel-solar-energy')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-panel-solar-energy')">&#10095;</button>
+                </div>
+                <p>Panel Solar</p>
+                <button class="price-btn">Reserva tu consulta virtual</button>
+            </div>
+            <div class="card" id="techo-solar">
+                <div class="carousel" id="carousel-techo-solar">
+                    <div class="carousel-images">
+                        <img src="Techo solar" alt="Techo Solar 1">
+                        <img src="images/techo-solar-2.jpg" alt="Techo Solar 2">
+                        <img src="images/techo-solar-3.jpg" alt="Techo Solar 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-techo-solar')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-techo-solar')">&#10095;</button>
+                </div>
+                <p>Techo Solar</p>
+                <button class="price-btn">Reserva tu consulta virtual</button>
+            </div>
+            <div class="card" id="tutorial">
+                <div class="carousel" id="carousel-tutorial">
+                    <div class="carousel-images">
+                        <img src="Tutorial" alt="Tutorial 1">
+                        <img src="images/tutorial-2.jpg" alt="Tutorial 2">
+                        <img src="images/tutorial-3.jpg" alt="Tutorial 3">
+                    </div>
+                    <button class="prev" onclick="prevSlide('carousel-tutorial')">&#10094;</button>
+                    <button class="next" onclick="nextSlide('carousel-tutorial')">&#10095;</button>
+                </div>
+                <p>Aprende a como pedir tus paneles solares</p>
+                <button class="price-btn">Solicita tus tutoriales</button>
+            </div>
+        </section>
+
+        <h2>Testimonios de Clientes</h2>
+        <section class="testimonials">
+            <div class="testimonial-card">
+                <p>"Tesla ha transformado completamente la manera en que veo la energía renovable. ¡Sus productos son increíbles!"</p>
+                <span>- Juan Pérez</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"El Cybertruck es el mejor vehículo que he tenido. Su diseño y rendimiento son insuperables."</p>
+                <span>- María García</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"La experiencia de compra y el servicio al cliente de Tesla son excepcionales. Altamente recomendado."</p>
+                <span>- Carlos López</span>
+            </div>
+        </section>
+
+        <h2>Noticias Recientes</h2>
+        <section class="news">
+            <div class="card" id="techo-solar">
+                <img src="Modelo y2" alt="Tesla Model Y">
+                <h3>Tesla lanza nuevo modelo de vehículo eléctrico</h3>
+                <p>Tesla ha anunciado el lanzamiento de su nuevo modelo de vehículo eléctrico, 
+                    con características innovadoras y un diseño revolucionario. </p>
+                <button class="info-btn">Leer Mas</button>
+            </div>
+            <div class="card" id="techo-solar">
+                <img src="Cargador 2" alt="Tesla Model S">
+                <h3>Expansión de las estaciones de carga de Tesla</h3>
+                <p>Tesla continúa expandiendo su red de estaciones de
+                     carga a nivel mundial, facilitando el acceso a la energía
+                      para sus usuarios.</p>
+                      <button class="info-btn">Leer Mas</button>
+            </div>
+            
+<div class="card" id="techo-solar">
+                <img src="Modelo y3" alt="Tesla Model Y">
+                <h3>Iniciativas de sostenibilidad de Tesla</h3>
+                <p>Tesla sigue liderando en iniciativas de sostenibilidad, con nuevos proyectos para reducir 
+                    su huella de carbono y promover el uso de energías renovables. 
+                    </p>
+                    <button class="info-btn">Leer Mas</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
